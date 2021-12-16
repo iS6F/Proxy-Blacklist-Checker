@@ -12,8 +12,7 @@ for ipport in ips:
     ipportlist = ipport.split(':')
     ip = ipportlist[0]
     os.system(f'title [ {ip} ]')
-    pl = {'ip': ip, 'action': 'blacklist-check'}
-    t = requests.post('https://www.xmyip.com/include/blacklisted.php', data=pl)
+    t = requests.post('https://www.xmyip.com/include/blacklisted.php', data={'ip': ip, 'action': 'blacklist-check'})
     soup = BeautifulSoup(t.content, 'lxml')
     ul = soup.find('ul', class_="vert")
     ulList = ul.text.split()
