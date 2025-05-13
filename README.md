@@ -17,4 +17,3 @@ after adding the folder and the files, (or make the python file do it), simply a
         with open(f'{path}\\config\\whitelisted.txt', 'a') as wl:
             wl.write(f'{ipport}\n')
 ```
-you can remove colors to make it more minimal or even add multi-poccesing yourself do whatever you like :)
